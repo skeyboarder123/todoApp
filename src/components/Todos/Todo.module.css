@@ -1,0 +1,60 @@
+.Todo {
+  margin: 20px auto;
+  width: 40%;
+  height: 30px;
+  background-color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  gap: 10px;
+  border-radius: 16px;
+  font: 700 24px / 24px sans-serif;
+  align-items: center;
+  user-select: none;
+}
+
+.icon_container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_styles {
+  font-size: 1.8rem;
+  color: teal;
+}
+
+.TodoText {
+  width: 90%;
+  text-align: left;
+}
+
+.icon_styles__approve,
+.icon_styles__dsapprove {
+  font-size: 1.8rem;
+  color: grey;
+  transition: font-size 52ms ease-in-out;
+  cursor: pointer;
+}
+
+.icon_styles__approve:hover {
+  font-size: 1.9rem;
+  color: red;
+}
+
+.icon_styles__dsapprove:hover {
+  font-size: 1.9rem;
+  color: green;
+}
+
+.approved_container {
+  color: grey;
+  background-color: unset;
+  outline: 1px solid grey;
+}
+
+.Todo.approved_container .icon_styles__approve,
+.Todo.approved_container .icon_styles__dsapprove,
+.Todo.approved_container .icon_styles {
+  color: grey;
+}

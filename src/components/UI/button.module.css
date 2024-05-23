@@ -1,0 +1,21 @@
+.btn_input {
+  padding: 15px 20px;
+  border: 0;
+  font: 700 16px / 16px sans-serif;
+  border-radius: 12px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 44ms ease-in-out;
+  user-select: none;
+}
+
+.btn_input:hover {
+  background-color: rgb(146, 130, 107);
+  outline: 2px solid #fff;
+  color: #fff;
+}
+
+.btn_input:disabled {
+  pointer-events: none;
+}

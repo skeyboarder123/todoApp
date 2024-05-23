@@ -1,0 +1,18 @@
+.input_todo {
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 12px;
+  width: 60%;
+  outline: 0;
+  font: 700 16px / 16px sans-serif;
+  user-select: none;
+}
+
+.main_form_btn {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px;
+}
