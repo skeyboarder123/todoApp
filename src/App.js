@@ -1,4 +1,4 @@
-import { useState, React } from 'react';
+import { useState, React, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import TodoForm from './components/Todos/TodoForm';
@@ -7,14 +7,25 @@ import TodosActions from './components/Todos/TodosActions';
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [toggleId, setToggleId] = useState([]);
+
+  useEffect(() => {
+    const localTodos = Object.values(localStorage).map((todo) =>
+      JSON.parse(todo)
+    );
+
+    setTodos(localTodos);
+  }, []);
 
   const addtodoHandler = (text) => {
     const newTodo = { text: text, isCompleted: false, id: uuidv4() };
+    localStorage.setItem(newTodo.id, JSON.stringify(newTodo));
     setTodos([...todos, newTodo]);
   };
 
   const deleteTodoHandler = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
+    localStorage.removeItem(id);
   };
 
   const toggleTodoHandler = (id) => {
@@ -25,14 +36,17 @@ function App() {
           : { ...todo }
       )
     );
+    setToggleId([...toggleId, id]);
   };
 
   const resetTodoHandler = () => {
     setTodos([]);
+    localStorage.clear();
   };
 
   const deleteCompletedTodosHandler = () => {
     setTodos(todos.filter((todo) => !todo.isCompleted));
+    toggleId.map((id) => localStorage.removeItem(id));
   };
 
   const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
@@ -51,7 +65,7 @@ function App() {
         )}
       </div>
 
-      {!todos.length ? (
+      {!localStorage.length ? (
         <h2 className="main_h2">Todo list is Empty!</h2>
       ) : (
         <TodoList
