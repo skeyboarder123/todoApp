@@ -6,6 +6,7 @@
   outline: 0;
   font: 700 16px / 16px sans-serif;
   user-select: none;
+  box-shadow: 2px 2px 4px 4px #06021b;
 }
 
 .main_form_btn {

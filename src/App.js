@@ -15,6 +15,7 @@ function App() {
     );
 
     setTodos(localTodos);
+    setToggleId([]);
   }, []);
 
   const addtodoHandler = (text) => {

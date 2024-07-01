@@ -1,12 +1,13 @@
 .Todo {
   margin: 20px auto;
-  width: 40%;
+  width: 45%;
   height: 30px;
   background-color: #fff;
   padding: 15px 20px;
   display: flex;
   gap: 10px;
   border-radius: 16px;
+  box-shadow: 0 0 4px 4px #000;
   font: 700 24px / 24px sans-serif;
   align-items: center;
   user-select: none;

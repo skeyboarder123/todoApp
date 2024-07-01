@@ -1,14 +1,30 @@
 body {
-  background-color: rgb(13, 13, 39);
+  background-color: rgb(5, 5, 14);
 }
 
 .App {
   text-align: center;
+  width: 1200px;
+  height: screen;
+  padding: 4rem 0;
+  margin: 6rem auto;
+  box-shadow: 4px 4px 12px 12px #03010e;
+  background-image: linear-gradient(
+    to bottom left,
+    #000 20%,
+    transparent 60%,
+    #000 100%
+  );
+  background-color: rgb(13, 13, 39);
 }
 
 .main_h1 {
   color: #fff;
+  width: fit-content;
+  margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 4px 4px #06021b;
   font: 700 42px / 42px sans-serif;
   user-select: none;
 }
